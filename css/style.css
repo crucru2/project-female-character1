@@ -1,0 +1,87 @@
+/* 1. 기본 스타일 */
+body {
+    padding-top: 56px; 
+    font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
+    word-break: keep-all;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Pretendard', sans-serif;
+    font-weight: 700;
+}
+
+/* 2. 네비게이션 바 */
+.navbar {
+    background-color: rgba(33, 37, 41, 0.85) !important; 
+    backdrop-filter: blur(10px); 
+    -webkit-backdrop-filter: blur(10px);
+}
+
+/* 3. 섹션 및 공통 컴포넌트 스타일 */
+
+/* (추가됨) '반복되는 패턴' 목록 스타일 */
+.pattern-list {
+    max-width: 500px;
+    margin: 0 auto;
+    border-top: 1px solid #dee2e6;
+    border-bottom: 1px solid #dee2e6;
+}
+.pattern-item {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    font-size: 1.1rem;
+}
+.pattern-item:not(:last-child) {
+    border-bottom: 1px solid #dee2e6;
+}
+.pattern-item i {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+    color: #6c757d;
+}
+
+
+/* '사라진 그녀들' 카드 스타일 */
+#vanished .character-card {
+    cursor: pointer;
+}
+.card-img-container {
+    width: 100%;
+    aspect-ratio: 1 / 1; 
+    overflow: hidden;
+    border-radius: .375rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    position: relative;
+    background-color: #000;
+}
+.card-img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.4s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.character-silhouette-hover {
+    opacity: 0;
+}
+.character-card:hover .character-img {
+    opacity: 0;
+    transform: scale(1.1);
+}
+.character-card:hover .character-silhouette-hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+/* SVG 구분선 스타일 */
+.shape-divider {
+    line-height: 0;
+}
+
+/* 푸터 카피라이트 스타일 */
+footer .copyright {
+    color: #888;
+    font-size: 0.9rem;
+}
